@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1140, user-scalable=yes">
+    <title>Bookmark</title>
+    <meta name="author" content="Aref Rwale" />
+    <meta name="description" content="Bookmark your favorite sites easily." />
+    <meta name="keywords" content="bookmark, favorite sites, web development" />
+
+    <!-- favicon -->
+    <link rel="icon" href="images/bookmark.png" />
+    <!-- google fonts styles -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fortawesome styles -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- bootstrap styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- main styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="mx-auto p-5">
+            <h1>Bookmaker</h1>
+            <div class="content">
+              <h2>
+                <i class="fa-solid fa-bookmark"></i> Bookmark your favorite
+                sites
+                <i class="fa-solid fa-bookmark"></i>
+              </h2>
+              <label for="siteName" class="py-2"
+                ><b><i class="fa-solid fa-book-bookmark"></i> Site Name</b>
+              </label>
+              <input
+                oninput="validationSiteName()"
+                type="text"
+                class="form-control"
+                id="siteName"
+                placeholder="Bookmark Name"
+              />
+
+              <p id="msgSiteName" class="alert alert-danger p-2 d-none">
+                2–15 characters. Letters required. No spaces at start or end. No
+                digits only.
+              </p>
+              <label for="siteUrl" class="py-2"
+                ><b><i class="fa-solid fa-link"></i> Site URL</b>
+              </label>
+              <input
+                oninput="validationSiteUrl()"
+                type="text"
+                class="form-control"
+                id="siteUrl"
+                placeholder="Website URL"
+              />
+
+              <p id="msgSiteUrl" class="alert alert-danger p-2 d-none">
+                Enter a valid URL that starts with http:// or https://
+              </p>
+
+              <div class="text-center">
+                <button
+                  onclick="addBookmark()"
+                  class="btn btn-danger px-5 mt-3"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+
+            <table class="table text-center align-middle">
+              <thead class="p-2">
+                <tr>
+                  <th scope="col">Index</th>
+                  <th scope="col">Website Name</th>
+                  <th scope="col">Visit</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+
+    <!-- main js -->
+    <script src="js/main.js"></script>
+    <!-- sweetalert2 js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

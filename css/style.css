@@ -1,0 +1,75 @@
+::selection {
+  background-color: #fec260;
+  color: #352e28;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  background-color: #f7ecde;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+h1::before {
+  content: "";
+  width: 100%;
+  height: 50%;
+  background-color: #fdc160;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.6s;
+}
+
+h1:hover::before {
+  height: 80%;
+}
+
+.content {
+  margin-block: 30px;
+  padding-block: 20px;
+  border-block: 2px dotted #000;
+}
+
+.content h2 {
+  font-family: "Righteous", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  background: linear-gradient(to right, #3fa55b 30%, #b2ac49 70%);
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.content input:focus {
+  border: 1px solid #fdc160;
+  box-shadow: 0 0 10px #fdc160;
+}
+
+table {
+  font-family: "PT Sans Caption", sans-serif;
+  color: #212529;
+  line-height: 24px;
+}
+
+.swal2-container button {
+  margin: 5px;
+}
+
+.container {
+  width: 1140px;
+  /* margin: 0 auto; */
+}
